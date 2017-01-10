@@ -3,7 +3,7 @@
     <div class="left">
       <slot name="left"></slot>
     </div>
-    <h1 class="wv-header-page__title" v-text="title"></h1>
+    <h1 class="wv-header-title" v-text="title"></h1>
     <div class="wv-header-button">
       <slot name="right"></slot>
     </div>
@@ -32,9 +32,20 @@ export default {
   .wv-header {
     display: block;
     overflow: hidden;
-    background-color: black;
+    background-color: #21292c;
     width: 100%;
+    height: 50px;
+    padding: 0;
+    margin: 0;
     color: white;
+    font-size: 14px;
+
+    .wv-header-title {
+      margin: 0;
+      padding: 0;
+      line-height: 50px;
+      font-weight: 100;
+    }
 
     &.is-fixed {
       position: fixed;
